@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мое Портфолио</title>
+    <style>
+        /* Общие стили и переменные */
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #7dd3fc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Шапка профиля */
+        header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.05em;
+        }
+
+        header h1 span {
+            color: var(--accent);
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .social-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin: 0 0.75rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Сетка проектов */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #334155;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+
+        /* Заглушка для изображения */
+        .project-image {
+            width: 100%;
+            height: 180px;
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-bottom: 1px solid #334155;
+        }
+
+        .project-info {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .project-info h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-info p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            background-color: #334155;
+            color: var(--accent);
+            font-size: 0.8rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        .project-link {
+            display: inline-block;
+            color: var(--bg-color);
+            background-color: var(--accent);
+            text-decoration: none;
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .project-link:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Подвал */
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid #334155;
+            padding-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Шапка -->
+        <header>
+            <h1>Привет, я <span>Имя Фамилия</span></h1>
+            <p>Я веб-разработчик. Создаю удобные, быстрые и красивые сайты. Ниже представлены мои последние работы, которые можно потрогать руками.</p>
+            <div class="social-links">
+                <a href="https://github.com/твой-логин" target="_blank">GitHub</a>
+                <a href="https://t.me/твой-юзернейм" target="_blank">Telegram</a>
+                <a href="mailto:твой-email@example.com">Email</a>
+            </div>
+        </header>
+
+        <!-- Сетка с работами -->
+        <main class="projects-grid">
+            
+            <!-- Карточка проекта 1 -->
+            <article class="project-card">
+                <!-- Замени текст в src на реальный путь к картинке, когда добавишь её в репозиторий, например: src="./images/project1.jpg" -->
+                <div class="project-image">Скриншот проекта 1</div>
+                <div class="project-info">
+                    <h3>Название проекта #1</h3>
+                    <p>Короткое, но емкое описание того, что делает этот сайт, какую задачу он решает и для кого был сделан.</p>
+                    <div class="projects-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a href="#" class="project-link" target="_blank">Посмотреть проект</a>
+                </div>
+            </article>
+
+            <!-- Карточка проекта 2 -->
+            <article class="project-card">
+                <div class="project-image">Скриншот проекта 2</div>
+                <div class="project-info">
+                    <h3>Название проекта #2</h3>
+                    <p>Описание второго проекта. Расскажи про интересные фичи, которые ты туда внедрил, или про сложности, которые удалось преодолеть в процессе.</p>
+                    <div class="projects-tags">
+                        <span class="tag">Vue.js</span>
+                        <span class="tag">Tailwind</span>
+                    </div>
+                    <a href="#" class="project-link" target="_blank">Посмотреть проект</a>
+                </div>
+            </article>
+
+            <!-- Карточка проекта 3 -->
+            <article class="project-card">
+                <div class="project-image">Скриншот проекта 3</div>
+                <div class="project-info">
+                    <h3>Название проекта #3</h3>
+                    <p>Информативный текст о третьем кейсе. Старайся писать так, чтобы заказчик или HR сразу понимали твою роль в разработке.</p>
+                    <div class="projects-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">API</span>
+                    </div>
+                    <a href="#" class="project-link" target="_blank">Посмотреть проект</a>
+                </div>
+            </article>
+
+        </main>
+
+        <!-- Подвал -->
+        <footer>
+            <p>&copy; 2026 Имя Фамилия. Создано с помощью кода и упорства.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
